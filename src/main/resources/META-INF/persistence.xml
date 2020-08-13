@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+    <!-- 연결할 데이터베스당 하나의 영속성 유닛을 등록 -->
+    <persistence-unit name="jpabook">
+        <properties>
+            <!-- 데이터 베이스 속성 -->
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+            <property name="javax.persistence.jdbc.user" value="sa" />
+            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/test"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <!-- 하이버네이트 속성 -->
+            <property name="hibernate.show_sql" value="true"/> <!-- 실행한 SQL 출력 -->
+            <property name="hibernate.format_sql" value="true"/> <!-- 실행한 SQL 출력시 보기좋게 정렬 -->
+            <property name="hibernate.use_sql_comments" value="true"/> <!-- 쿼리를 출력할 때 주석도 같이 출력 -->
+            <property name="hibernate.id.new_generator_mapping" value="true"/> <!-- JPA 표준에 맞춘 키 생성 전략을 사용한다. -->
+        </properties>
+    </persistence-unit>
+</persistence>
